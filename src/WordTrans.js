@@ -47,7 +47,7 @@ function WordTrans() {
             toText.setAttribute('placeholder', 'Translating...');
             try {
                 const response = await fetch(
-                    `https://text-translation-82x6r5qry-oyetech.vercel.app/api/translate/?text=${encodeURIComponent(text)}&source=${translateFrom}&target=${translateTo}`
+                    `https://text-translation-akjypz5ts-oyetech.vercel.app/api/translate?text=${encodeURIComponent(text)}&source=${translateFrom}&target=${translateTo}`
                 );
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
