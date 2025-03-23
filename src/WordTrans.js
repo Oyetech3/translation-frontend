@@ -39,8 +39,6 @@ function WordTrans() {
             const translateFrom = selectFromLang.value;
             const translateTo = selectToLang.value;
 
-            const apiUrl = "https://text-translation-82x6r5qry-oyetech.vercel.app/api/translate"
-
             if (!text) {
                 alert('Please enter text to translate.');
                 return;
@@ -49,7 +47,7 @@ function WordTrans() {
             toText.setAttribute('placeholder', 'Translating...');
             try {
                 const response = await fetch(
-                    `${apiUrl}?text=${encodeURIComponent(text)}&source=${translateFrom}&target=${translateTo}`
+                    `https://text-translation-82x6r5qry-oyetech.vercel.app/api/translate/?text=${encodeURIComponent(text)}&source=${translateFrom}&target=${translateTo}`
                 );
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
